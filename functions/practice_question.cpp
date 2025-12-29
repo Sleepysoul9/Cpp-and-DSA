@@ -23,14 +23,22 @@ float humidity(){
     return hum ;
 }
 
-void status_report(){
-    cout << "temperature value is : "<< temperature << endl ;
-    cout << "humidity value is : "<< humidity << endl ;
+void status_report(float a, float b){
+    cout << "status report :" << endl ;
+    cout << "temperature value is : "<< a << endl ;
+    cout << "humidity value is : "<< b << endl ;
 }
 
 float vpd(float temperature, float humidity){
     float vpd ;
     vpd =  ((temperature + humidity)/100 )*1.5;
+    cout << "vpd value is : "<< vpd << endl ;
+    if(vpd > 1.0) {
+        cout << "CRITICAL : High evaporation risk" << endl;
+    }
+    else {
+        cout << "climate stable" << endl;
+    }
     return vpd ;
 }
 
@@ -42,8 +50,8 @@ int main (){
     cur_tem = temperature();
     cur_hum = humidity();
 
-    status_report();
-    vpd(temperature, humidity);
+    status_report(cur_tem, cur_hum);
+    vpd(cur_tem, cur_hum);
 
     return 0 ;
 }
