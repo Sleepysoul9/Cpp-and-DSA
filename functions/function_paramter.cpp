@@ -2,6 +2,7 @@
 using namespace std;
 
 int dosomething(int num) {
+   
     // this will not change the value of num in main as we are passing by value. 
     //here the stack will create a copy of num and any changes made to num here will not reflect in main function.
     //the original num is used in main fuction
@@ -19,6 +20,7 @@ int dosomething(int num) {
 
 
 int domore(int &num) {
+    
     // this will change the value of num in main as we are passing by reference. 
     //here the stack will not create a copy of num and any changes made to num here will reflect in main function.
     //the original num is used in main fuction
@@ -33,8 +35,16 @@ int domore(int &num) {
     return num;
 }
 
-// array is always passed by reference in c++, so we dont need to use "&" to pass by reference
 
+void array_trial(int arr[]){
+    
+    // array is always passed by reference in c++, so we dont need to use "&" to pass by reference
+
+    for(int i = 0 ; i < 5 ; i++){
+        arr[i] = arr[i] + 10;
+    }
+    cout << "inside function array[0] is "<< arr[0]<< endl ;
+}
 
 int main(){
     int num = 19;
@@ -42,5 +52,11 @@ int main(){
     cout << num << endl;
     domore(num);
     cout << num << endl;
+
+    int arr[5] = {1,2,3,4,5};
+    cout << "before function array[0] is "<< arr[0]<< endl;
+    array_trial(arr);
+    cout << "after function array[0] is "<< arr[0]<< endl;
+
     return 0;
 }
