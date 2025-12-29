@@ -12,6 +12,8 @@ using namespace std;
 
 // The "VPD" Calculation: You need to calculate the Vapor Pressure Deficit (VPD) index. For this challenge, use this simplified formula:$$VPD = \frac{(Temperature + Humidity)}{100} \times 1.5$$Health Warning: If the calculated VPD is greater than 1.0, the program should print a warning: "CRITICAL: High Evaporation Risk!" Otherwise, it should print "Climate Stable."
 
+
+
 float temperature(){
     float temp ;
     cout << "enter temperature in celcius"<< endl ;
@@ -46,8 +48,7 @@ float vpd(float temperature, float humidity){
     return vpd ;
 }
 
-void vpd_report(float vpd_value){
-    
+void vpd_report(float vpd_value){   
     cout << "vpd value is : "<< vpd_value << endl ;
     if(vpd_value > 1.0) {
         cout << "CRITICAL : High evaporation risk" << endl;
