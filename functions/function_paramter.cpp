@@ -33,6 +33,9 @@ int domore(int &num) {
     return num;
 }
 
+// array is always passed by reference in c++, so we dont need to use "&" to pass by reference
+
+
 int main(){
     int num = 19;
     dosomething(num);
