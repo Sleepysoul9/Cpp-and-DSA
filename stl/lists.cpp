@@ -43,6 +43,60 @@ int main(){
     }
     cout<<endl;
 
+    li.push_back(10);
+    li.push_front(2);
+    li.push_back(15);
+    li.push_front(20);
+
+    li.sort(); //sorts the list
+    cout<<"sorted list: ";
+    for(auto i : li){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    li.reverse(); //reverses the list
+    cout<<"reversed list: ";
+    for(auto i : li){
+        cout<<i<<" ";
+    }
+    cout<<endl; 
+
+    li.remove(10); //removes all occurrences of 10
+    cout<<"list after removing 10: ";
+    for(auto i : li){   
+        cout<<i<<" ";
+    }   
+    cout<<endl;
+
+    auto it2= find(li.begin(),li.end(),15);
+    if(it2!=li.end()){
+        li.erase(it2);
+    }
+    cout<<"list after erasing 15: ";
+    for(auto i : li){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+
+    list<int> li2 = {100,200,30,10};
+    li.merge(li2);
+    cout<<"merged list: ";
+    for(auto i : li){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+
+    li.unique(); //removes consecutive duplicates
+    cout<<"list after applying unique: "; 
+    for(auto i : li){
+        cout<<i<<" ";
+    } 
+    cout<<endl;
+
+    li.clear(); //clears the list   
+    for(auto i : li){
+        cout<<i<<" ";
+    }   
 
 
 
