@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//same as maps but stored in randomized fashion instead of sorted order , keys need to be unique
+
 int main(){
     
     unordered_map<int,int> ump ;
