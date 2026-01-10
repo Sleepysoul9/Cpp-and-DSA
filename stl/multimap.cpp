@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//stores multiple entire of same key . no unique key boundation
+//same as map but stores multiple entire of same key . no unique key boundation, 
 
 int main(){
     
