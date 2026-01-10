@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//containers that stores in key value pair . like dictionaries in python
+
 int main(){
     
     map<int,int> mp;
