@@ -19,7 +19,11 @@ int main(){
     auto it= mmp.find(3);
     cout<<++(*it).second<<endl;
 
-    
+
+    for(multimap<int,int>::iterator it2=mmp.begin() ; it2!=mmp.end();it2++){
+        cout<<"key : "<<(*it2).first<<" "<<"value: "<<(*it2).second<<endl;
+    }
+    cout<<endl;
     
     
     return 0;
