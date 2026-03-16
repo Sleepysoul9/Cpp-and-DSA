@@ -7,9 +7,7 @@ using namespace std;
 
 //there are total of 256 charchters in ascii code chart . 
 
-int main(){
-    string s;
-    cin>>s;
+void lowercase_hashing(string s){
     int hash[26]  = {0};
     for(int i = 0 ; i < s.size() ; i++){
         hash[int(s[i] - 'a')] += 1;
@@ -24,6 +22,34 @@ int main(){
         k-- ;
     }
 
+}
+
+void overall_hashing(string s1){
+    int hash[256] = {0} ;
+    for(int i = 0 ; i<s1.size() ; i++){
+        hash[int(s1[i])] += 1;
+    }
+
+    int k ;
+    cin>> k;
+    cin.ignore();            //ignore the input buffer
+    while(k>0){
+        char c;
+        // cin>>c;          //doesnt accepts the whitespace , it skips the whitespace 
+        cin.get(c);         //accepts whitespaces as input
+        cin.ignore();       //ignores the enter button as a query submitted together with your query . for eg you ask for K then press enter it assumes that you are sending 2 queries together which is "K\n" K and \n so it gives 2 outputs .        
+        cout<<hash[int(c)]<<endl;
+        k--;
+    }
+}
+
+int main(){
+    string s , s1;
+    cin>>s;
+    lowercase_hashing(s); 
+
+    getline(cin,s1);
+    overall_hashing(s1);
 
     return 0;
 }
