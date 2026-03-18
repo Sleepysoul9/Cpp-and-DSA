@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//maps takes lesser space than frequency array . as it only stores key value pairs of asked queries not make the array till max asked query
+
 int main(){
     int n;
     cout<<"enter n : ";
@@ -10,7 +12,7 @@ int main(){
         cin>>arr[i];
     }
     map<int,int> mpp;           //in maps values are automatically initiated by 0
-    
+
     for(int i = 0 ; i < n ; i++){
         mpp[arr[i]] += 1;
     }
