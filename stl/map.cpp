@@ -3,6 +3,7 @@ using namespace std;
 
 //containers that stores in key value pair . like dictionaries in python
 //stores value in sorted order
+//for integers the default value for key which is not created or value isnt provided is 0 .
 
 int main(){
     
@@ -20,7 +21,10 @@ int main(){
     mpp.emplace(2,2);
     mpp.emplace(5,6);
     mpp.emplace(4,3);
-    mpp.emplace(4,5);
+    mpp.emplace(4,5);           //if key already exist the emplace function does nothing , so here value wont be changed, to update we need to use [] operator
+    mpp.insert({1,3});          //value wont be updated as insert behaves same as emplace functiion 
+    mpp[4] = 5 ;
+    mpp[1] = 3 ;
     for(auto i :mpp){
         cout<<i.first<<" "<<i.second<<endl;
     }
@@ -30,6 +34,11 @@ int main(){
 
     auto it2 = mpp.find(3);
     cout<<(*it2).second<<endl;
+    mpp[7];                 //sets default value 0 when value not provided
+    mpp[8] = 1;             //value given , henve value setted to given value
+    
+    cout<<mpp[7]<<endl;           //output = 0
+    cout<<mpp[8]<<endl;
 
     
     return 0;
