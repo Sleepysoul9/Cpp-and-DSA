@@ -40,6 +40,10 @@ int main(){
     cout<<mpp[7]<<endl;           //output = 0
     cout<<mpp[8]<<endl;
 
+    //if value doesnt exists the map will return 0 as output
+
+    cout<<mpp[12]<<endl;     //output = 0
+
     
     return 0;
 }
