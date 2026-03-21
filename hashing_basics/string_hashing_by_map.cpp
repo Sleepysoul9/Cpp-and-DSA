@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//maps takes log(n) in average , best and worst case to store and fetch the things, whereas unordered map takes O(1) in best and average case and O(N) in worst case ,
+//maps takes log(n) in average , best and worst case to store and fetch the things, whereas unordered map takes O(1) in best and average case and O(N) in worst case 
+
+//for store and fetch a series of input like array or string , the map runs in a loop which makes its complexity NlogN
 
 int main(){
     string s;
