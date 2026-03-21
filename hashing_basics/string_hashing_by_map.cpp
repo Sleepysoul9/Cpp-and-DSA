@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//maps takes nlog(n) in average , best and worst case to store and fetch the things, whereas unordered map takes O(1) in best and average case and O(N) in worst case ,
+
 int main(){
     string s;
     cout<<"enter the string : ";
