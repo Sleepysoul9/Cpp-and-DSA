@@ -3,6 +3,8 @@ using namespace std;
 
 //unordered map uses O(1) for best and avg case but that worst case takes O(N) , which when ran in loop finally makes O(N^2) time complexity. and this worst case happens very rarely , hence we use unordered map for hashing
 
+//that worst case of unordered map happens due to internal collisions
+
 int main() {
     string s;
     cout<<"enter your string : ";
