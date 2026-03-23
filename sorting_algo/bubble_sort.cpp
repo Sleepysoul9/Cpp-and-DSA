@@ -32,6 +32,7 @@ void bubble_sort(vector<int> &arr){
                 swap(arr[j],arr[j+1]);
             }
             //for logging the steps of our sorting , we are printing it step by step , like after each step we are printing it what the array looks like after operation
+            
             for(int k = 0 ; k <= n ; k++){
                 cout<<arr[k]<<" ";
             }
