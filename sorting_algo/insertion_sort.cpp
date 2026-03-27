@@ -1,3 +1,10 @@
+/* 
+time complexity : 
+best case : O(N)
+average case : O(N^2)
+worst case : O(N^2)
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
